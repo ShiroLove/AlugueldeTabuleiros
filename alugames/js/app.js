@@ -26,21 +26,3 @@ function jogosAlugados () {
     var jogos = document.querySelectorAll('.dashboard__item__img--rented').length;
     alert(`Você tem ${jogos} jogos alugados`);
 }
-
-function palindromo(palavra){
-    var palavraInvertida = palavra.split('').reverse().join('');
-    if (palavraInvertida === palavra) {
-        console.log('É um palíndromo');
-    } else {
-        console.log('Não é um palíndromo');
-    }
-}
-
-
-function ordenarNumeros(a, b, c){
-    var numeros = [a, b, c];
-    numeros.sort(function(a, b){
-        return a - b;
-    });
-    console.log(numeros);
-}
