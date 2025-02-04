@@ -23,6 +23,12 @@ function alterarStatus(id){
 }
 
 function jogosAlugados () {
-    var jogos = document.querySelectorAll('.dashboard__item__img--rented').length;
-    alert(`Você tem ${jogos} jogos alugados`);
+    if (document.querySelectorAll('.dashboard__item__img--rented').length == 0) {
+        document.getElementById('jogos-alugados').innerHTML = ('Você não alugou nenhum jogo');
+    } else {
+        var jogos = document.querySelectorAll('.dashboard__item__img--rented').length;
+    let palavrajogos = jogos > 1 ? 'jogos' : 'jogo';
+    let mensagem = document.getElementById('jogos-alugados').innerHTML = (`Você tem ${jogos} ${palavrajogos} alugados`);
+    }
+
 }
